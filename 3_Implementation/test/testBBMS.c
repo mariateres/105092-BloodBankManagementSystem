@@ -2,7 +2,7 @@
 
 /* Modify these two lines according to the project */
 #include "DonorOperations.h"
-#define PROJECT_NAME    "BBMS"
+#define PROJECT_NAME    "BloodBankManagementSystem"
 
 /* Prototypes for all the test functions */
 
