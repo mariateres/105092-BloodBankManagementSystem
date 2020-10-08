@@ -10,7 +10,7 @@ src/DonorOperations.c\
 
 # All test source files
 TEST_SRC = src/DonorOperations.c\
-test/test_DonorOperations.c
+test/testBBMS.c
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
