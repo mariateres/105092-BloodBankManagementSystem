@@ -73,7 +73,7 @@ int AddDonor(void)
     printf("%27s: ","Enter donor age");
     gets(currentd->age);
     printf("%27s: ","Enter blood group");
-    gets(toupper(currentd->bloodgroup)));
+    gets(currentd->bloodgroup);
     printf("%27s: ","Enter contact Phone number");
     gets(currentd->phone);
     printf("%27s: ","Enter contact email");
