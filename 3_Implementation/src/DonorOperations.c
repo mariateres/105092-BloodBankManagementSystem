@@ -2,7 +2,7 @@
 #include <malloc.h>
 #include <string.h>
 #include <ctype.h>
-dnum=0;
+int dnum=0;
 
 typedef struct donor {
     int number;
@@ -51,7 +51,7 @@ int prompt(void)
 	else
 		return(0);
 }
-void AddDonor(void)
+int AddDonor(void)
 {
     newd = (struct donor *)malloc(sizeof(struct donor));
     if(firstd==NULL)
@@ -82,8 +82,9 @@ void AddDonor(void)
     printf("********  donor details added  ******** ");
     currentd->count=0;
     currentd->next = NULL;
+	return 0;
 }
-void List(void)
+int List(void)
 {
     if(firstd==NULL)
 	puts("There are no donor details to display!");
@@ -105,8 +106,9 @@ void List(void)
 	}
 	while((currentd=currentd->next) != NULL);
     }
+	return 0;
 }
-void DeleteDonor(void)
+int DeleteDonor(void)
 {
     int record;
     if(firstd==NULL)
@@ -134,8 +136,9 @@ void DeleteDonor(void)
 	}
     }
     printf("donor details %d not found!\n",record);
+	return 0;
  }
-void Update(void)
+int Update(void)
 {
     int record, result;
     if(firstd==NULL)
@@ -164,9 +167,10 @@ void Update(void)
 	    printf("Email: %s\n",currentd->email);
 	    if(prompt())
 		    gets(currentd->email);
-	    return;
+	    return 0;
 	}
     printf("donor details %d was not found!\n",record);
+	return 1;
 }
 
 int Search(void)
