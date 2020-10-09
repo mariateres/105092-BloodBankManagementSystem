@@ -49,10 +49,10 @@ int main() {
   return 0;
 }
 void test_menu(void) {
-  CU_ASSERT(1 == valid_choice(2));
-  CU_ASSERT(1 == valid_choice(5));
-  CU_ASSERT(1 == valid_choice(3));
-  CU_ASSERT(1 == valid_choice(1));
+  CU_ASSERT(1 == valid_choice('2'));
+  CU_ASSERT(1 == valid_choice('5'));
+  CU_ASSERT(0 == valid_choice('8'));
+  CU_ASSERT(0 == valid_choice('9'));
 }
   /* Dummy fail*/
   //CU_ASSERT(2 == AddDonor());
