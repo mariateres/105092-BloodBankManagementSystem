@@ -16,10 +16,10 @@ typedef struct donor {
 int prompt(void);
 int findnum (int);
 void clearInput(void);
-void AddDonor(void);
-void List(void);
-void DeleteDonor(void);
-void Update(void);
+int AddDonor(void);
+int List(void);
+int DeleteDonor(void);
+int Update(void);
 int Search(void);
 
 
