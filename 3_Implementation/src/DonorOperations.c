@@ -73,7 +73,7 @@ int AddDonor(void)
     printf("%27s: ","Enter donor age");
     gets(currentd->age);
     printf("%27s: ","Enter blood group");
-    gets(currentd->bloodgroup);
+    gets(toupper(currentd->bloodgroup)));
     printf("%27s: ","Enter contact Phone number");
     gets(currentd->phone);
     printf("%27s: ","Enter contact email");
@@ -90,12 +90,12 @@ int List(void)
 	puts("There are no donor details to display!");
     else
     {
-	    printf("%6s %-20s %-15s %-15s\n","Acct#","Name","Age","Blood Group","Phone","Email");
+	    printf("%6s %-20s %-2s %-5s %-15s %-20s\n","Acct#","Name","Age","Blood Group","Phone","Email");
 	puts("------ -------------------- ------------- -------------------");
 	currentd=firstd;
 	do
 	{
-		printf("%6d: %-20s %-15s %-20s\n",\
+		printf("%6d: %-20s %-2s %-5s %-15s %-20s\n",\
 		currentd->number,\
 		currentd->name,\
 		currentd->age,\
@@ -160,7 +160,7 @@ int Update(void)
 		    gets(currentd->age);
         printf("Blood Group: %s\n",currentd->bloodgroup);
 	    if(prompt())
-		    gets(currentd->bloodgroup);
+		    gets(toupper(currentd->bloodgroup));
 	    printf("Phone: %s\n",currentd->phone);
 	    if(prompt())
 		    gets(currentd->phone);
@@ -187,11 +187,11 @@ int Search(void)
     currentd = firstd;
     while(currentd != NULL)
     {
-	if( strcmp(currentd->name, buff) == 0 )
+	if( strcmp(currentd->bloodgroup, buff) == 0 )
 	    {
-			printf("%6s %-20s %-15s %-15s\n","Acct#","Name","Age","Phone","Email");
+			printf("%6s %-20s %-2s %-15s %-20s\n","Acct#","Name","Age","Phone","Email");
 
-	    printf("%6d: %-20s %-15s %-20s\n",\
+	    printf("%6d: %-20s %-2s %-15s %-20s\n",\
 	    currentd->number,\
 	    currentd->name,\
 	    currentd->age,\
