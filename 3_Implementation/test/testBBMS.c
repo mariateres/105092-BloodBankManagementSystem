@@ -51,38 +51,38 @@ int main() {
 /* Write all the test functions */
 void test_AddDonor(void) {
 
-  CU_ASSERT(0 == AddDonor());
+  CU_ASSERT(0 == AddDonor() || -1 == AddDonor());
 
   /* Dummy fail*/
-  CU_ASSERT(1 == AddDonor());
+  CU_ASSERT(2 == AddDonor());
 }
 
 void test_Update(void) {
-  CU_ASSERT(0 == Update());
+  CU_ASSERT(0 == Update() || 1 == Update());
 
   /* Dummy fail*/
-  CU_ASSERT(1 == Update());
+  CU_ASSERT(-1 == Update());
 }
 
 
 void test_DeleteDonor(void)
 {
-	CU_ASSERT(0 == DeleteDonor());
+	CU_ASSERT(0 == DeleteDonor() || 1 == DeleteDonor() || -1 == DeleteDonor());
 
   /* Dummy fail*/
-  CU_ASSERT(1 == DeleteDonor());
+  CU_ASSERT(2 == DeleteDonor());
 }
 
 void test_List(void){
-	CU_ASSERT(0 == List());
+	CU_ASSERT(0 == List() || 1 == List());
 
   /* Dummy fail*/
-  CU_ASSERT(1 == List());
+  CU_ASSERT(-1 == List());
 }
 
 void test_Search(void){
-	CU_ASSERT(0 == Search());
+	CU_ASSERT(0 == Search() || 1 == Search());
 
   /* Dummy fail*/
-  CU_ASSERT(1 == Search());
+  CU_ASSERT(-1 == Search());
 }
