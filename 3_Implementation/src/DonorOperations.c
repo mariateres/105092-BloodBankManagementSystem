@@ -18,7 +18,7 @@ typedef struct donor {
 Donor *firstd,*currentd,*newd;
 int valid_choice(char choice)
 {
-    if(choice == 1|| choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6)
+    if(choice == '1'|| choice == '2'|| choice == '3'|| choice == '4'|| choice == '5'|| choice == 'Q' || choice == 'q')
         return 1;
     return 0;
 }
