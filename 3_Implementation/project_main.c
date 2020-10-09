@@ -53,6 +53,7 @@ int main()
 	puts("Q - Save and quit\n");
 	printf("\tYour choice:");
 	ch = getchar();
+	    valid_choice(ch);
 	    ch = toupper(ch);
 	switch(ch)
 	{
