@@ -12,7 +12,7 @@ typedef struct donor {
     struct donor *next;
     int count;
     } Donor;
-
+int valid_choice(char);
 int prompt(void);
 int findnum (int);
 void clearInput(void);
