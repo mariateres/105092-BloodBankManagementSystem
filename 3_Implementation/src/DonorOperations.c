@@ -69,15 +69,15 @@ int AddDonor(void)
     printf("%27s: %5i\n","donor number",dnum);
     currentd->number = dnum;    /*dnum is used to give unique numbers*/
     printf("%27s: ","Enter donor name");
-    gets(currentd->name);+
+    fgets(currentd->name);
     printf("%27s: ","Enter donor age");
-    gets(currentd->age);
+    fgets(currentd->age);
     printf("%27s: ","Enter blood group");
-    gets(toupper(currentd->bloodgroup));
+    fgets(toupper(currentd->bloodgroup));
     printf("%27s: ","Enter contact Phone number");
-    gets(currentd->phone);
+    fgets(currentd->phone);
     printf("%27s: ","Enter contact email");
-    gets(currentd->email);
+    fgets(currentd->email);
 
     printf("********  donor details added  ******** ");
     currentd->count=0;
@@ -114,7 +114,7 @@ int DeleteDonor(void)
     if(firstd==NULL)
     {
 	puts("There are no donor details to delete!");
-	return;
+	return 1;
     }
     List();
     printf("Enter donor number to delete: ");
@@ -128,7 +128,7 @@ int DeleteDonor(void)
 		firstd=currentd->next;
 	free(currentd);
 	    printf("donor deatils %d deleted!\n",record);
-	    return;
+	    return 0;
 	}
 	else
 	{
@@ -144,7 +144,7 @@ int Update(void)
     if(firstd==NULL)
     {
 	puts("There are no donor details to modify!");
-	return;
+	return 1;
     }
 
     printf("Enter donor number to modify or change: ");
@@ -154,23 +154,23 @@ int Update(void)
 	    printf("Contact no %d:\n",currentd->number);
 	    printf("Name: %s\n",currentd->name);
 	    if(prompt())
-		    gets(currentd->name);
+		    fgets(currentd->name);
         printf("Age: %s\n",currentd->age);
 	    if(prompt())
-		    gets(currentd->age);
+		    fgets(currentd->age);
         printf("Blood Group: %s\n",currentd->bloodgroup);
 	    if(prompt())
-		    gets(toupper(currentd->bloodgroup));
+		    fgets(toupper(currentd->bloodgroup));
 	    printf("Phone: %s\n",currentd->phone);
 	    if(prompt())
-		    gets(currentd->phone);
+		    fgets(currentd->phone);
 	    printf("Email: %s\n",currentd->email);
 	    if(prompt())
-		    gets(currentd->email);
+		    fgets(currentd->email);
 	    return 0;
 	}
     printf("donor details %d was not found!\n",record);
-	return 1;
+	return 0;
 }
 
 int Search(void)
