@@ -7,7 +7,7 @@
 
 /* Prototypes for all the test functions */
 
-//void test_AddDonor(void);
+void test_AddDonor(void);
 void test_List(void);
 //void test_DeleteDonor(void);
 //void test_Update(void);
@@ -28,7 +28,7 @@ int main() {
   /* Add your test functions in this format for testing*/
 
 
-  //CU_add_test(suite, "Added", test_AddDonor);
+  CU_add_test(suite, "Add", test_AddDonor);
   CU_add_test(suite, "List", test_List);
   //CU_add_test(suite, "Delete", test_DeleteDonor);
   //CU_add_test(suite, "Update", test_Update);
@@ -56,17 +56,12 @@ void test_menu(void) {
 }
   void test_List(void) {
   CU_ASSERT(1 == List());
-  //CU_ASSERT(0 == List());
-  //CU_ASSERT(0 == valid_choice('8'));
-  //CU_ASSERT(0 == valid_choice('9'));
-}
-/*
-/* Write all the test functions */
-/*
+  }
+
 void test_AddDonor(void) {
 
-  CU_ASSERT(0 == AddDonor() || -1 == AddDonor());
-
+  CU_ASSERT(0 == AddDonor());
+}
   /* Dummy fail*/
   //CU_ASSERT(2 == AddDonor());
 //}*/
