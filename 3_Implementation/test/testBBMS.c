@@ -55,7 +55,7 @@ void test_menu(void) {
   CU_ASSERT(0 == valid_choice('9'));
 }
   void test_List(void) {
-  CU_ASSERT(1 == List());
+  //CU_ASSERT(1 == List());
 CU_ASSERT(0 == List());
   }
 
