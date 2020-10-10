@@ -10,7 +10,7 @@
 void test_AddDonor(void);
 void test_List(void);
 void test_DeleteDonor(void);
-//void test_Update(void);
+void test_Update(void);
 //void test_Search(void);
 
 void test_menu(void);
@@ -63,12 +63,9 @@ void test_AddDonor(void) {
   CU_ASSERT(0 == AddDonor());
 }
  
-//void test_Update(void) {
- // CU_ASSERT(0 == Update() || 1 == Update());
-
-  /* Dummy fail*/
- // CU_ASSERT(-1 == Update());
-//}*/
+void test_Update(void) {
+ CU_ASSERT(0 == Update());
+ }
 
 
 void test_DeleteDonor(void)
