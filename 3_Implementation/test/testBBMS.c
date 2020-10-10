@@ -31,7 +31,7 @@ int main() {
   CU_add_test(suite, "Add", test_AddDonor);
   CU_add_test(suite, "List", test_List);
   CU_add_test(suite, "Delete", test_DeleteDonor);
-  //CU_add_test(suite, "Update", test_Update);
+  CU_add_test(suite, "Update", test_Update);
   //CU_add_test(suite, "Search", test_Search);
 	CU_add_test(suite, "Valid", test_menu);
 
