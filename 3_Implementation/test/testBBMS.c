@@ -74,7 +74,7 @@ void test_DeleteDonor(void)
 }
   
 void test_Search(void){
-	//CU_ASSERT(0 == Search());
-	CU_ASSERT(1 == Search());
+	CU_ASSERT(0 == Search());
+	//CU_ASSERT(1 == Search());
 
 }
