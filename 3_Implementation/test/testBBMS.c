@@ -53,8 +53,7 @@ void test_menu(void) {
   CU_ASSERT(1 == valid_choice('5'));
 	CU_ASSERT(1 == valid_choice('1'));
 	CU_ASSERT(1 == valid_choice('3'));
-	CU_ASSERT(0 == valid_choice('4'));
-	CU_ASSERT(0 == valid_choice('Q'));
+	
   CU_ASSERT(0 == valid_choice('8'));
   CU_ASSERT(0 == valid_choice('9'));
 	CU_ASSERT(0 == valid_choice('7'));
