@@ -6,13 +6,13 @@
 #define PROJECT_NAME    "BloodBankManagementSystem"
 
 /* Prototypes for all the test functions */
-/*
-void test_AddDonor(void);
+
+//void test_AddDonor(void);
 void test_List(void);
-void test_DeleteDonor(void);
-void test_Update(void);
-void test_Search(void);
-*/
+//void test_DeleteDonor(void);
+//void test_Update(void);
+//void test_Search(void);
+
 void test_menu(void);
 
 /* Start of the application test */
@@ -29,7 +29,7 @@ int main() {
 
 
   //CU_add_test(suite, "Added", test_AddDonor);
-  //CU_add_test(suite, "List", test_List);
+  CU_add_test(suite, "List", test_List);
   //CU_add_test(suite, "Delete", test_DeleteDonor);
   //CU_add_test(suite, "Update", test_Update);
   //CU_add_test(suite, "Search", test_Search);
@@ -54,9 +54,12 @@ void test_menu(void) {
   CU_ASSERT(0 == valid_choice('8'));
   CU_ASSERT(0 == valid_choice('9'));
 }
-  /* Dummy fail*/
-  //CU_ASSERT(2 == AddDonor());
-//}*/
+  void test_List(void) {
+  CU_ASSERT(1 == List());
+  CU_ASSERT(0 == List());
+  //CU_ASSERT(0 == valid_choice('8'));
+  //CU_ASSERT(0 == valid_choice('9'));
+}
 /*
 /* Write all the test functions */
 /*
