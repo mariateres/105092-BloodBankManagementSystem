@@ -92,7 +92,10 @@ int AddDonor(void)
 int List(void)
 {
     if(firstd==NULL)
+    {
 	puts("There are no donor details to display!");
+	    return 1;
+    }
     else
     {
 	    printf("%6s %-20s %-2s %-5s %-15s %-20s\n","Acct#","Name","Age","Blood Group","Phone","Email");
