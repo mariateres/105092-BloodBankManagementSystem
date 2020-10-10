@@ -9,7 +9,7 @@
 
 void test_AddDonor(void);
 void test_List(void);
-//void test_DeleteDonor(void);
+void test_DeleteDonor(void);
 //void test_Update(void);
 //void test_Search(void);
 
@@ -30,7 +30,7 @@ int main() {
 
   CU_add_test(suite, "Add", test_AddDonor);
   CU_add_test(suite, "List", test_List);
-  //CU_add_test(suite, "Delete", test_DeleteDonor);
+  CU_add_test(suite, "Delete", test_DeleteDonor);
   //CU_add_test(suite, "Update", test_Update);
   //CU_add_test(suite, "Search", test_Search);
 	CU_add_test(suite, "Valid", test_menu);
@@ -55,7 +55,6 @@ void test_menu(void) {
   CU_ASSERT(0 == valid_choice('9'));
 }
   void test_List(void) {
-  //CU_ASSERT(1 == List());
 CU_ASSERT(0 == List());
   }
 
@@ -63,22 +62,19 @@ void test_AddDonor(void) {
 
   CU_ASSERT(0 == AddDonor());
 }
-  /* Dummy fail*/
-  //CU_ASSERT(2 == AddDonor());
-//}*/
-/*
-void test_Update(void) {
-  CU_ASSERT(0 == Update() || 1 == Update());
+ 
+//void test_Update(void) {
+ // CU_ASSERT(0 == Update() || 1 == Update());
 
   /* Dummy fail*/
  // CU_ASSERT(-1 == Update());
 //}*/
 
-/*
+
 void test_DeleteDonor(void)
 {
-	CU_ASSERT(0 == DeleteDonor() || 1 == DeleteDonor() || -1 == DeleteDonor());
-
+	CU_ASSERT(0 == DeleteDonor());
+}
   /* Dummy fail*/
  // CU_ASSERT(2 == DeleteDonor());
 //}*/
