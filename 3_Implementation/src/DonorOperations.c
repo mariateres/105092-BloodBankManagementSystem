@@ -208,7 +208,8 @@ int Search(void)
 			return 0;
 	   }
 		else
-		{         currentd = currentd->next;      }
+		{         currentd = currentd->next;  
+		return 0;}
     }
     printf("donor %s was not found!\n",buff);
 	  return 1;
