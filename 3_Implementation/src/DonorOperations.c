@@ -82,7 +82,7 @@ int AddDonor(void)
     printf("%27s: ","Enter contact Phone number");
     fgets(currentd->phone);
     printf("%27s: ","Enter contact email");
-    gets(currentd->email);
+    fgets(currentd->email);
 
     printf("********  donor details added  ******** ");
     currentd->count=0;
