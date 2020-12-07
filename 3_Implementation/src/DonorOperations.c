@@ -74,15 +74,15 @@ int AddDonor(void)
     printf("%27s: %5i\n","donor number",dnum);
     currentd->number = dnum;    /*dnum is used to give unique numbers*/
     printf("%27s: ","Enter donor name");
-    scanf(currentd->name);
+    scanf("%s",currentd->name);
     printf("%27s: ","Enter donor age");
-    scanf(currentd->age);
+    scanf("%s",currentd->age);
     printf("%27s: ","Enter blood group");
-    scanf(currentd->bloodgroup);
+    scanf("%s",currentd->bloodgroup);
     printf("%27s: ","Enter contact Phone number");
-    scanf(currentd->phone);
+    scanf("%s",currentd->phone);
     printf("%27s: ","Enter contact email");
-    scanf(currentd->email);
+    scanf("%s",currentd->email);
 
     printf("********  donor details added  ******** ");
     currentd->count=0;
@@ -162,19 +162,19 @@ int Update(void)
 	    printf("Contact no %d:\n",currentd->number);
 	    printf("Name: %s\n",currentd->name);
 	    if(prompt())
-		    gets(currentd->name);
+		    scanf("%s",currentd->name);
         printf("Age: %s\n",currentd->age);
 	    if(prompt())
-		    gets(currentd->age);
+		    scanf("%s",currentd->age);
         printf("Blood Group: %s\n",currentd->bloodgroup);
 	    if(prompt())
-		    gets(currentd->bloodgroup);
+		    scanf("%s",currentd->bloodgroup);
 	    printf("Phone: %s\n",currentd->phone);
 	    if(prompt())
-		    gets(currentd->phone);
+		    scanf("%s",currentd->phone);
 	    printf("Email: %s\n",currentd->email);
 	    if(prompt())
-		    gets(currentd->email);
+		    scanf("%s",currentd->email);
 	    return 0;
 	}
     printf("donor details %d was not found!\n",record);
