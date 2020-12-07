@@ -191,7 +191,7 @@ int Search(void)
     }
     printf("Enter blood group required: ");
     fflush(stdin);
-    gets(buff);
+    scanf("%s",buff);
     currentd = firstd;
     while(currentd != NULL)
     {
