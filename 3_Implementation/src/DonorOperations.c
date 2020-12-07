@@ -74,15 +74,15 @@ int AddDonor(void)
     printf("%27s: %5i\n","donor number",dnum);
     currentd->number = dnum;    /*dnum is used to give unique numbers*/
     printf("%27s: ","Enter donor name");
-    fgets(currentd->name);
+    gets(currentd->name);
     printf("%27s: ","Enter donor age");
-    fgets(currentd->age);
+    gets(currentd->age);
     printf("%27s: ","Enter blood group");
-    fgets(currentd->bloodgroup);
+    gets(currentd->bloodgroup);
     printf("%27s: ","Enter contact Phone number");
-    fgets(currentd->phone);
+    gets(currentd->phone);
     printf("%27s: ","Enter contact email");
-    fgets(currentd->email);
+    gets(currentd->email);
 
     printf("********  donor details added  ******** ");
     currentd->count=0;
